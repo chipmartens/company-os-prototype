@@ -6,11 +6,10 @@ A clickable prototype of a work app where AI teammates and people work in one pl
 
 ## How to look around
 
-1. The first screen is day one: setup from a company website. Click **Skip to sample workspace** (top right) to jump to a busy sample day.
-2. **Today** is the one list of what needs you. Every count in the app reads from it.
-3. **Chat** holds your private Assistant, your AI teammates and your channels.
-4. The rail on the left switches workspaces: Today, Chat, Tasks, Calendar, Meetings, Partners, Reports, Library.
-5. Switch between an admin (Leane) and a member (Dennis) from the avatar menu, under **Demo: view as**.
+1. **Today** is the one list of what needs you. Every count in the app reads from it.
+2. **Chat** holds your private Assistant, your AI teammates and your channels.
+3. The rail on the left switches workspaces: Today, Chat, Tasks, Calendar, Meetings, Partners, Reports, Library.
+4. Switch between an admin (Leane) and a member (Dennis) from the avatar menu, under **Demo: view as**.
 
 ## Shortcuts
 

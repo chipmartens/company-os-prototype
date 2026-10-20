@@ -3660,7 +3660,6 @@ function renderTop(){
     <div class="lab">Single-key shortcuts (J, K, A)</div><span class="segs"><button class="${S.keys!==false?'on':''}" data-a="keys1" data-v="on">On</button><button class="${S.keys===false?'on':''}" data-a="keys1" data-v="off">Off</button></span>
     <div class="sep"></div><div class="lab">Demo: view as</div><span class="segs"><button class="${S.me==='priya'?'on':''}" data-a="me" data-u="priya">Leane · admin</button><button class="${S.me==='marcus'?'on':''}" data-a="me" data-u="marcus">Dennis · member</button></span>
     ${(S.mode==='chat' && (S.conv==='cos'||S.conv.startsWith('g:')||S.conv.startsWith('p:'))) ? `<div class="lab">Demo: preview this chat in</div><span class="segs">${[['app','App'],['slack','Slack'],['teams','Teams']].map(o=>`<button class="${S.mirror===o[0]?'on':''}" data-a="mirrorset" data-v="${o[0]}">${o[1]}</button>`).join('')}</span>` : ''}
-    <button class="mi" data-a="replay">${ic('redo',16)} Replay day one</button>
     <div class="sep"></div><button class="mi" data-a="noop">${ic('out',16)} Log out</button></div>`;
   if(pop) pop = pop.replace('<div class="tb-pop', `<div role="dialog" aria-label="${({keys:'Keyboard shortcuts', notif:'Needs you', user:'Account'})[S.pop]||'Menu'}" class="tb-pop`);
   document.getElementById('tbpop').innerHTML = pop;
@@ -4143,6 +4142,6 @@ document.addEventListener('submit', e=>{ e.preventDefault();
   if(S.onb.on){ if(S.onb.step===0) onbDo({do:'site', v:t}); else onbSay(t, 'Got it. I\'ll fold that in. Carry on whenever you\'re ready.'); return; }
   if(S.conv.startsWith('g:') && gview(S.conv.slice(2))==='posts') S.gview[S.conv.slice(2)]='chat';
   send(t); });
-S.onb = freshOnb();
+S.onb = {...freshOnb(), on:false}; // ponytail: onboarding removed from the demo; vOnb code left dormant
 render();
 </script>
